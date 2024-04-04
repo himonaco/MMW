@@ -1,20 +1,18 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import WebDev from './WebDev';
+import Drone from './Drone';
+import LandingPage from './LandingPage';
 
 function App() {
   return (
-    <div>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div">
-            My App
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      {/* Your other components and content here */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/webdev" element={<WebDev />} />
+        <Route path="/drone" element={<Drone />} />
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Router>
   );
 }
 
