@@ -11,30 +11,31 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Button from '@mui/material/Button';
 
-const pages = ['Projects', 'Services', 'Contact',];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = [ 'services', 'projects', 'contact']; // Updated without the hash symbol
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const handleMenuItemClick = (page) => {
+    handleCloseNavMenu();
+    const sectionId = `#${page}`; // Prepend hash symbol to the section ID
+    if (page === 'services') {
+      document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+    } else {
+      document.querySelector(sectionId).scrollIntoView();
+    }
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'white', color: 'black' }}> {/* Change backgroundColor to 'white' and color to 'black' */}
+    <AppBar position="sticky" sx={{ backgroundColor: 'white', color: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -85,8 +86,8 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              {pages.map((page, index) => (
+                <MenuItem key={page} onClick={() => handleMenuItemClick(page)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -112,21 +113,20 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleMenuItemClick(page)}
                 sx={{ my: 2, color: 'black', display: 'block' }} 
               >
                 {page}
               </Button>
             ))}
           </Box>
-
-          
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;
