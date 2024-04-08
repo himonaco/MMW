@@ -39,16 +39,28 @@ function WebDev() {
         <p style={{ marginBottom: '0' }}>Ready to take your online presence to the next level? Contact us today to discuss your web development needs and discover how we can help your business thrive in the digital landscape.</p>
 
         {/* Project Section */}
-        <h2 id="projects" style={{ marginBottom: '20px', textAlign: 'center' }}>Projects</h2>
+        <h2 id="projects" style={{ marginBottom: '5px', textAlign: 'center' }}>Projects</h2>
         {/* Add your project content here */}
         <MyCarousel />
 
         {/* Testimonials Section */}
 
         {/* Contact Section */}
-        <h2 id="contact" style={{ marginBottom: '20px', textAlign: 'center' }}>Contact</h2>
+        <h2 id="contact" style={{ marginBottom: '30px', textAlign: 'center' }}>Contact Us</h2>
         {/* Add your contact content here */}
         <ContactForm />
+      </div>
+      <div
+        style={{
+          position: "static",
+          background: "#333",
+          color: "#fff",
+          textAlign: "center",
+          padding: "5px",
+          marginTop: "30px",
+        }}
+      >
+        <p>© 2024 Monaco Media Works. All rights reserved.</p>
       </div>
     </div>
   );

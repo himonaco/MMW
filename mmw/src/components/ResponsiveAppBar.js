@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Button from '@mui/material/Button';
+import InstagramIcon from '@mui/icons-material/Instagram'; // Import Instagram icon
 
 const pages = [ 'services', 'projects', 'contact']; // Updated without the hash symbol
 
@@ -93,6 +94,16 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
+          <IconButton
+            size="large"
+            aria-label="instagram"
+            color="inherit"
+            component="a"
+            href="https://www.instagram.com/your_instagram_handle/"
+            target="_blank" // Open link in a new tab
+          >
+            
+          </IconButton>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -123,6 +134,7 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
+          <InstagramIcon />
         </Toolbar>
       </Container>
     </AppBar>
