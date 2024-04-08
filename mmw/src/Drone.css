@@ -1,0 +1,78 @@
+.drone .content {
+    padding: 20px;
+    max-width: 70vw;
+    margin: auto;
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .drone .content {
+        padding: 10px;
+        max-width: 90vw;
+    }
+
+    .description {
+        padding: 0 5vw;
+    }
+}
+
+/* Styles for large screens */
+@media (min-width: 769px) {
+    .drone .content {
+        padding: 20px;
+        max-width: 70vw;
+    }
+
+    .description {
+        padding: 0 10vw;
+    }
+}
+
+#services .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title .highlight {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.description {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 2;
+}
+
+.sub-title {
+    margin-bottom: 10px;
+}
+
+.services-list {
+    margin-bottom: 20px;
+}
+
+.why-us {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#projects .project-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact .contact-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer {
+    position: static;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}

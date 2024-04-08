@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
+import './MyCarousel.css'; // Import the CSS file
 
 function MyCarousel() {
   const items = [
@@ -19,39 +20,31 @@ function MyCarousel() {
   ];
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "60vh"}}>
+    <div className="carousel-container">
       <Carousel
-        autoPlay={true} // Disable autoplay if not needed
-        indicators={false} // Disable indicators if not needed
-        animation="slide" // Choose animation type (slide, fade)
-        timeout={500} // Animation timeout in milliseconds
-        navButtonsAlwaysVisible // Show navigation buttons always
-        fullHeightHover={false} // Remove the hover effect if not needed
-        cycleNavigation // Allow cycling through items
+        autoPlay={true}
+        indicators={false}
+        animation="slide"
+        timeout={500}
+        navButtonsAlwaysVisible
+        fullHeightHover={false}
+        cycleNavigation
         navButtonsProps={{
-          // Style navigation buttons if needed
-          style: {
-            backgroundColor: "rgba(255, 255, 255, 0.5)",
-            color: "black",
-          },
+          className: "carousel-nav-buttons",
         }}
         navButtonsWrapperProps={{
-          // Style navigation buttons wrapper if needed
-          style: {
-            bottom: "10px",
-          },
+          className: "carousel-nav-buttons-wrapper",
         }}
-        NextIcon={<span>&#10095;</span>} // Customize the next button icon
-        PrevIcon={<span>&#10094;</span>} // Customize the previous button icon
-        // Add more props as needed
-        sx={{ width: "60%", maxWidth: "1000px" }} // Adjust the width of the carousel
+        NextIcon={<span>&#10095;</span>}
+        PrevIcon={<span>&#10094;</span>}
+        sx={{ width: "60%", maxWidth: "1000px" }}
       >
         {items.map((item, index) => (
-          <Paper key={index} style={{ textAlign: "center" }}>
+          <Paper key={index} className="carousel-item">
             <img
               src={item.image}
               alt={item.name}
-              style={{ maxWidth: "100%", height: "auto", maxHeight: "300px" }} // Custom style for image size
+              className="carousel-image"
             />
             <h2>{item.name}</h2>
             <p>{item.description}</p>

@@ -94,16 +94,7 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <IconButton
-            size="large"
-            aria-label="instagram"
-            color="inherit"
-            component="a"
-            href="https://www.instagram.com/your_instagram_handle/"
-            target="_blank" // Open link in a new tab
-          >
-            
-          </IconButton>
+          
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -134,7 +125,16 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <InstagramIcon />
+          <IconButton
+            size="large"
+            aria-label="instagram"
+            color="inherit"
+            component="a"
+            href="https://www.instagram.com/chi.non.fa.non.falla/"
+            target="_blank" // Open link in a new tab
+          >
+            <InstagramIcon />
+          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>

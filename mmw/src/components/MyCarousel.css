@@ -1,0 +1,50 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.carousel-nav-buttons {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+.carousel-nav-buttons-wrapper {
+    bottom: 10px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 50vh; /* Decrease the height on small screens */
+        width: 100%; /* Make the carousel fill the entire width */
+        margin: 0 auto; /* Center the carousel */
+    }
+
+    .carousel-image {
+        max-height: 200px; /* Decrease the image height on small screens */
+    }
+}
+
+/* Styles for large screens */
+@media (min-width: 769px) {
+    .carousel-container {
+        height: 60vh; /* Increase the height on large screens */
+        z-index: 1;
+    }
+
+    .carousel-image {
+        max-height: 300px; /* Increase the image height on large screens */
+    }
+}
