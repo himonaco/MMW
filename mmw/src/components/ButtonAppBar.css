@@ -1,0 +1,45 @@
+.box {
+    flex-grow: 1;
+  }
+  
+  
+  .appBar {
+    width: 100%;
+    position: fixed; /* or 'sticky' */
+    top: 0; 
+    background-color: white;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .iconButton {
+    margin-right: 2rem;
+  }
+  
+  .menuIcon {
+    font-size: 2.5rem;
+  }
+  
+  .typography {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .adbIcon {
+    display: none;
+    margin-right: 1rem;
+  }
+  
+  .logo {
+    height: 50px;
+    width: 50px;
+  }
+  
+  @media (min-width: 768px) {
+    .adbIcon {
+      display: flex;
+    }
+  }

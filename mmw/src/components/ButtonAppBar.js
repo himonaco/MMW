@@ -9,7 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../assets/logo.jpg';
 import { Link } from 'react-router-dom';
-import AdbIcon from '@mui/icons-material/Adb';
+import './ButtonAppBar.css'; 
 
 export default function ButtonAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,36 +23,33 @@ export default function ButtonAppBar() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: 'white' }}> {/* Change backgroundColor to 'white' */}
-        <Toolbar>
+    <Box className="box">
+      <AppBar className="appBar" sx={{ bgcolor: 'white' }}>        
+      <Toolbar className="toolbar">
           <IconButton
             size="large"
             edge="start"
             color="black"
             aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={handleClick} // Open menu on click
+            className="iconButton"
+            onClick={handleClick}
           >
-            <MenuIcon sx={{ fontSize: '2.5rem' }} />
+            <MenuIcon className="menuIcon" />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> {/* Display the AdbIcon */}
-            <img src={Logo} alt="Logo" style={{ height: '50px', width: '50px' }} /> {/* Display the logo */}
+          <Typography variant="h6" component="div" className="typography">
+            <img src={Logo} alt="Logo" className="logo" />
           </Typography>
           <Menu
             id="menu-appbar"
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
-            onClose={handleClose} // Close menu on outside click
+            onClose={handleClose}
           >
-            {/* Menu Items */}
             <MenuItem component={Link} to="/webdev" onClick={handleClose}>Web Development</MenuItem>
             <MenuItem component={Link} to="/drone" onClick={handleClose}>Drone Marketing</MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>
     </Box>
-    
   );
 }

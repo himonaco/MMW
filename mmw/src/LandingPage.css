@@ -1,0 +1,136 @@
+.landingPageContent {
+    padding-top: 80px; /* Adjust this value to match the height of your AppBar */
+  }
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .intro-section {
+    text-align: center;
+    padding: 0 10vw;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 2;
+  }
+  
+  .bold-text {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5vw;
+  }
+  
+  .service {
+    text-align: center;
+    margin: 20px;
+    flex: 1 0 200px; /* This will make the service boxes responsive */
+  }
+  
+  .service-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+.footer {
+    width: 100%;
+    position: static;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+.service img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Adjust this value to suit your needs */
+    object-fit: cover; /* This will ensure that your images are always fully visible */
+    border-radius: 20px;
+  }
+  
+  .greyed-out {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: opacity 0.3s, filter 0.3s;
+  }
+  
+  .greyed-out:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+  
+  .stack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+  }
+  
+  .stack.visible {
+    visibility: visible;
+  }
+  
+  .button {
+    background-color: black;
+    border-radius: 20px;
+    border: 1px solid white;
+   
+  }
+  
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+  
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .services-section {
+        flex-direction: column;
+    }
+    .service img {
+        width: 100%; /* Set the width to 100% on smaller screens */
+    }
+    .greyed-out {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+    .stack {
+        visibility: visible;
+    }
+    .button {
+        background-color: black; /* Change the background color to black */
+        color: white; /* Keep the text color as white for contrast */
+        width: auto;
+    }
+}
+
+/* Media query for screens larger than 768px */
+@media (min-width: 769px) {
+    .services-section {
+        flex-direction: row;
+    }
+    .service img {
+        width: auto; /* Reset the width on larger screens */
+    }
+    .greyed-out:hover {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+    .stack:hover {
+        visibility: visible;
+    }
+}
