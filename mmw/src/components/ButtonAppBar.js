@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from '../assets/logo.jpg';
+import Logo from '../assets/logofull1.png';
 import { Link } from 'react-router-dom';
 import './ButtonAppBar.css'; 
 

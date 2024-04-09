@@ -8,11 +8,12 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Button from '@mui/material/Button';
-import InstagramIcon from '@mui/icons-material/Instagram'; // Import Instagram icon
+import InstagramIcon from '@mui/icons-material/Instagram';
+import Logo from '../assets/logofull1.png';
+import './ResponsiveAppBar.css';
 
-const pages = [ 'services', 'projects', 'contact']; // Updated without the hash symbol
+const pages = ['services', 'projects', 'contact'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,7 +28,7 @@ function ResponsiveAppBar() {
 
   const handleMenuItemClick = (page) => {
     handleCloseNavMenu();
-    const sectionId = `#${page}`; // Prepend hash symbol to the section ID
+    const sectionId = `#${page}`;
     if (page === 'services') {
       document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
     } else {
@@ -36,103 +37,35 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: 'white', color: 'black' }}>
+    <AppBar position="sticky" className="app-bar">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            MMW
+        <Toolbar disableGutters className="toolbar">
+          <Typography variant="h6" noWrap component="a" href="#app-bar-with-responsive-menu" className="typography">
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+          <Box className="box">
+            <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit" className="icon-button">
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
+            <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} className="menu">
               {pages.map((page, index) => (
-                <MenuItem key={page} onClick={() => handleMenuItemClick(page)}>
+                <MenuItem key={page} onClick={() => handleMenuItemClick(page)} className="menu-item">
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
+          <Typography variant="h5" noWrap component="a" href="#app-bar-with-responsive-menu" className="typography-logo">
+            <img src={Logo} alt="Logo" className="logo" />
+            
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className="box-pages">
             {pages.map((page, index) => (
-              <Button
-                key={page}
-                onClick={() => handleMenuItemClick(page)}
-                sx={{ my: 2, color: 'black', display: 'block' }} 
-              >
+              <Button key={page} onClick={() => handleMenuItemClick(page)} className="button">
                 {page}
               </Button>
             ))}
           </Box>
-          <IconButton
-            size="large"
-            aria-label="instagram"
-            color="inherit"
-            component="a"
-            href="https://www.instagram.com/chi.non.fa.non.falla/"
-            target="_blank" // Open link in a new tab
-          >
+          <IconButton size="large" aria-label="instagram" color="inherit" component="a" href="https://www.instagram.com/monacomediaworks/" target="_blank" className="instagram-icon">
             <InstagramIcon />
           </IconButton>
         </Toolbar>

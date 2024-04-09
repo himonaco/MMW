@@ -34,9 +34,11 @@
   }
   
   .logo {
-    height: 50px;
-    width: 50px;
-  }
+    width: 150px;
+    height: auto;
+    padding-top: 10px;
+    align-items: center;
+}
   
   @media (min-width: 768px) {
     .adbIcon {

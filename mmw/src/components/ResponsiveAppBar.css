@@ -1,0 +1,61 @@
+.app-bar {
+    background-color: white;
+    color: black;
+}
+
+.toolbar {
+    /* Add your styles for the toolbar here */
+}
+
+.typography {
+    margin-right: 2rem;
+    display: none;
+    font-family: monospace;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.box {
+    flex-grow: 1;
+    display: flex;
+}
+
+.icon-button {
+    /* Add your styles for the icon button here */
+}
+
+.menu {
+    display: block;
+}
+
+.typography-logo {
+    margin-right: 2rem;
+    display: flex;
+    flex-grow: 1;
+    font-family: monospace;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.box-pages {
+    flex-grow: 1;
+    display: none;
+}
+
+.button {
+    margin: 2rem 0;
+    color: black;
+    display: block;
+}
+
+.logo {
+    /* Add your styles for the logo here */
+}
+
+.instagram-icon {
+    /* Add your styles for the Instagram icon here */
+}
