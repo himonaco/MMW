@@ -1,12 +1,32 @@
 import React from 'react';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
-import SwipeableTextMobileStepper from './components/SwipeableTextMobileStepper';
 import MyCarousel from './components/MyCarousel';
 import ContactForm from './components/ContactForm';
 import './WebDev.css'; // Import the CSS file
+import Fab from '@mui/material/Fab';
+import NavigationIcon from '@mui/icons-material/Navigation';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+  },
+});
 
 function WebDev() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
+    <ThemeProvider theme={theme}>
     <div className="webdev">
       <ResponsiveAppBar />
 
@@ -54,7 +74,11 @@ function WebDev() {
       <div className="footer">
         <p>© 2024 Monaco Media Works. All rights reserved.</p>
       </div>
-    </div>
+      <Fab color="inherit" aria-label="scroll back to top" className="scroll-top-button" onClick={scrollToTop} sx={{ backgroundColor: 'transparent' }}>
+          <NavigationIcon color="primary" />
+        </Fab>
+      </div>
+    </ThemeProvider>
   );
 }
 
