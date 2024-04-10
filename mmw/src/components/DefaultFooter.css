@@ -1,0 +1,10 @@
+.footers {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.3);
+    background-color: white;
+    z-index: 1001; /* This should be higher than the z-index of your carousel */
+}

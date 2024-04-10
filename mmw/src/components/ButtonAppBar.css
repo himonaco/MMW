@@ -28,16 +28,14 @@
     text-align: center;
   }
   
-  .adbIcon {
-    display: none;
-    margin-right: 1rem;
-  }
+
   
   .logo {
     width: 150px;
     height: auto;
     padding-top: 10px;
     align-items: center;
+    padding-bottom: 10px;
 }
   
   @media (min-width: 768px) {

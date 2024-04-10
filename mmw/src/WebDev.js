@@ -6,6 +6,7 @@ import './WebDev.css'; // Import the CSS file
 import Fab from '@mui/material/Fab';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import DefaultFooter from './components/DefaultFooter';
 
 
 const theme = createTheme({
@@ -71,9 +72,7 @@ function WebDev() {
         {/* Add your contact content here */}
         <ContactForm />
       </div>
-      <div className="footer">
-        <p>© 2024 Monaco Media Works. All rights reserved.</p>
-      </div>
+      <DefaultFooter />
       <Fab color="inherit" aria-label="scroll back to top" className="scroll-top-button" onClick={scrollToTop} sx={{ backgroundColor: 'transparent' }}>
           <NavigationIcon color="primary" />
         </Fab>

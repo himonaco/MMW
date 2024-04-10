@@ -13,7 +13,7 @@ import './ButtonAppBar.css';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 
 const theme = createTheme({
@@ -43,87 +43,83 @@ export default function ButtonAppBar() {
     document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
   };
 
-
-
-
-
-    return (
-        <ThemeProvider theme={theme}>
-            <AppBar position="sticky" sx={{ bgcolor: 'white' }} className="appBar">
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters className="toolbar">
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
-                            className="typography"
-                        ></Typography>
-                        <Box className="box">
-                            <IconButton
-                                size="large"
-                                edge="start"
-                                color="primary"
-                                aria-label="menu"
-                                className="iconButton"
-                                onClick={handleClick}
-                            >
-                                <MenuIcon style={{fontSize: 40}} className="menuIcon" />                
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorEl}
-                                open={Boolean(anchorEl)}
-                                onClose={handleClose}
-                            >
-                                {pages.map((page, index) => (
-                                    <MenuItem
-                                        key={page}
-                                        component={Link}
-                                        to={`/${page}`}
-                                        onClick={() => handleMenuItemClick(page)}
-                                    >
-                                        <Typography textAlign="center">{page}</Typography>
-                                    </MenuItem>
-                                ))}
-                            </Menu>
-                        </Box>
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
-                            className="typography-logo"
-                        >
-                            <img src={Logo} alt="Logo" className="logo" />
-                        </Typography>
-                        <Box className="box-pages">
-                            {pages.map((page, index) => (
-                                <Button
-                                    key={page}
-                                    component={Link}
-                                    to={`/${page}`}
-                                    onClick={() => handleMenuItemClick(page)}
-                                    className="button"
-                                >
-                                    {page}
-                                </Button>
-                            ))}
-                        </Box>
-                        <IconButton
-                            size="large"
-                            aria-label="instagram"
-                            color="primary"
-                            component="a"
-                            href="https://www.instagram.com/your_instagram_handle/"
-                            target="_blank"
-                            className="instagram-icon"
-                        >
-                            <InstagramIcon style={{fontSize: 40}} />
-                        </IconButton>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={theme}>
+      <AppBar position="sticky" sx={{ bgcolor: 'white' }} className="appBar">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters className="toolbar">
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              className="typography"
+            ></Typography>
+            <Box className="box">
+              <IconButton
+                size="large"
+                edge="start"
+                color="primary"
+                aria-label="menu"
+                className="iconButton"
+                onClick={handleClick}
+              >
+                <MenuIcon style={{fontSize: 40}} className="menuIcon" />                
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                {pages.map((page, index) => (
+                  <MenuItem
+                    key={page}
+                    component={Link}
+                    to={`/${page}`}
+                    onClick={() => handleMenuItemClick(page)}
+                  >
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              className="typography-logo"
+            >
+              <img src={Logo} alt="Logo" className="logo" />
+            </Typography>
+            <Box className="box-pages">
+              {pages.map((page, index) => (
+                <Button
+                  key={page}
+                  component={Link}
+                  to={`/${page}`}
+                  onClick={() => handleMenuItemClick(page)}
+                  className="button"
+                >
+                  {page}
+                </Button>
+              ))}
+            </Box>
+            <IconButton
+              size="large"
+              aria-label="instagram"
+              color="primary"
+              component="a"
+              href="https://www.instagram.com/monacomediaworks/"
+              target="_blank"
+              className="instagram-icon"
+            >
+              <InstagramIcon style={{fontSize: 40}} />
+              </IconButton>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </ThemeProvider>
+  );
 }

@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import "./LandingPage.css"; // Import the CSS file
 import useMediaQuery from '@mui/material/useMediaQuery';
+import DefaultFooter from "./components/DefaultFooter";
 
 function LandingPage() {
   const [hovered1, setHovered1] = useState(false);
@@ -102,10 +103,8 @@ function LandingPage() {
               </Stack>
             </Link>
           </div>
-        </div>
-        <div className="footer">
-          <p>© 2024 Monaco Media Works. All rights reserved.</p>
-        </div>
+        </div>        
+      <DefaultFooter />
       </div>
     </div>
   );

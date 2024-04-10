@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
+    background-color: transparent;
 }
 
 .carousel-nav-buttons {
@@ -30,6 +31,7 @@
         height: 50vh; /* Decrease the height on small screens */
         width: 100%; /* Make the carousel fill the entire width */
         margin: 0 auto; /* Center the carousel */
+
     }
 
     .carousel-image {
@@ -41,7 +43,6 @@
 @media (min-width: 769px) {
     .carousel-container {
         height: 60vh; /* Increase the height on large screens */
-        z-index: 1;
     }
 
     .carousel-image {
