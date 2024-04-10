@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import MyCarousel from './components/MyCarousel';
 import ContactForm from './components/ContactForm';
 import './WebDev.css'; // Import the CSS file
-import Fab from '@mui/material/Fab';
-import NavigationIcon from '@mui/icons-material/Navigation';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DefaultFooter from './components/DefaultFooter';
 import ScrollTopButton from "./components/ScrollTopButton";
@@ -21,12 +19,9 @@ const theme = createTheme({
 
 function WebDev() {
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

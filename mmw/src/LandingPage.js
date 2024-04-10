@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ButtonAppBar from "./components/ButtonAppBar";
 import Image1 from "./assets/image1.jpg";
@@ -13,6 +13,10 @@ function LandingPage() {
   const [hovered1, setHovered1] = useState(false);
   const [hovered2, setHovered2] = useState(false);
   const isMobile = useMediaQuery('(max-width:768px)');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="landingPageContent">

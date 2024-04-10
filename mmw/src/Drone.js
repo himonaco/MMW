@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import MyCarousel from "./components/MyCarousel";
 import ContactForm from "./components/ContactForm";
@@ -16,6 +16,10 @@ const theme = createTheme({
 });
 
 function Drone() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <div className="drone">
@@ -24,9 +28,6 @@ function Drone() {
         <div className="content">
           {/* Drone Services Section */}
           <section id="services">
-            <h1 className="title">
-              Welcome to <span className="highlight">Monaco Media Works</span>!
-            </h1>
             <h3 className="description">
               At <span className="highlight">Monaco Media Works</span>, we
               specialize in providing cutting-edge aerial photography and
