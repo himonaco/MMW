@@ -7,6 +7,8 @@ import Fab from '@mui/material/Fab';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DefaultFooter from './components/DefaultFooter';
+import ScrollTopButton from "./components/ScrollTopButton";
+
 
 
 const theme = createTheme({
@@ -73,9 +75,8 @@ function WebDev() {
         <ContactForm />
       </div>
       <DefaultFooter />
-      <Fab color="inherit" aria-label="scroll back to top" className="scroll-top-button" onClick={scrollToTop} sx={{ backgroundColor: 'transparent' }}>
-          <NavigationIcon color="primary" />
-        </Fab>
+      <ScrollTopButton />
+      
       </div>
     </ThemeProvider>
   );

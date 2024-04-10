@@ -15,7 +15,6 @@ import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -24,7 +23,10 @@ const theme = createTheme({
   },
 });
 
-const pages = ["Web Development", "Drone Marketing"];
+const pages = [
+  { name: "Web Development", url: "webdev" },
+  { name: "Drone Marketing", url: "drone" },
+];
 
 export default function ButtonAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -35,12 +37,6 @@ export default function ButtonAppBar() {
 
   const handleClose = () => {
     setAnchorEl(null);
-  };
-
-  const handleMenuItemClick = (page) => {
-    handleClose();
-    const sectionId = `#${page}`;
-    document.querySelector(sectionId).scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -74,12 +70,11 @@ export default function ButtonAppBar() {
               >
                 {pages.map((page, index) => (
                   <MenuItem
-                    key={page}
+                    key={page.name}
                     component={Link}
-                    to={`/${page}`}
-                    onClick={() => handleMenuItemClick(page)}
+                    to={`/${page.url}`}
                   >
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -96,13 +91,12 @@ export default function ButtonAppBar() {
             <Box className="box-pages">
               {pages.map((page, index) => (
                 <Button
-                  key={page}
+                  key={page.name}
                   component={Link}
-                  to={`/${page}`}
-                  onClick={() => handleMenuItemClick(page)}
+                  to={`/${page.url}`}
                   className="button"
                 >
-                  {page}
+                  {page.name}
                 </Button>
               ))}
             </Box>
@@ -116,7 +110,7 @@ export default function ButtonAppBar() {
               className="instagram-icon"
             >
               <InstagramIcon style={{fontSize: 40}} />
-              </IconButton>
+            </IconButton>
           </Toolbar>
         </Container>
       </AppBar>
