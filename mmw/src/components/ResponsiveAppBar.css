@@ -59,3 +59,17 @@
 .instagram-icon {
     color: black;
 }
+.logo.shrink {
+    width: 90px; /* Adjust the size as needed */
+  }
+  .logo {
+    transition: width 0.3s ease; /* Add transition property for width */
+  }
+  .menu-item a,
+.button a {
+  text-decoration: none;
+}
+.menu-item a:visited,
+.button a:visited {
+  color: inherit; /* or specify the color you want */
+}

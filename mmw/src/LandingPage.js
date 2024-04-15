@@ -35,6 +35,9 @@ function LandingPage() {
             online presence and visualize the world from new heights with{" "}
             <span className="bold-text">MMW</span>.
           </h3>
+          <Button component={Link} to="/ContentCreation" variant="contained" className="button">
+            Content Creation
+          </Button>
         </div>
         <div className="services-section">
           <div className="service">
