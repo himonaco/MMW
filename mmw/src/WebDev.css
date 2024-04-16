@@ -1,3 +1,4 @@
+/* Base styles */
 .webdev {
     /* Add styles for the main div here */
 }
@@ -36,18 +37,18 @@
     margin-top: 30px;
     z-index: 2;
 }
+
 .scroll-top-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-  }
+}
 
 /* Styles for small screens */
 @media (max-width: 768px) {
     .content {
         max-width: 90vw; /* Increase the width on small screens */
-        margin-top: -650px;
-
+        margin-top: 0; /* Remove negative margin-top */
     }
 
     .footer {
