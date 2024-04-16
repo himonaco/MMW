@@ -31,28 +31,23 @@
   transition: box-shadow 0.3s ease;
 }
 
-
 @media screen and (max-width: 767px) {
   .action-card {
     width: calc(50% - 20px); /* Adjust as needed */
     margin-bottom: 20px; /* Add space between cards */
   }
-  .intro {
-    margin-top: -600px;
-  }
+  
   .card {
-    margin: 20px;
-    
+    margin: 20px; /* Adjust as needed */
   }
 }
 
 @media screen and (min-width: 768px) {
   .action-card {
     width: calc(33.33% - 20px);
-   
   }
   .intro {
-    margin-bottom: 100px;
+    margin-bottom: 100px; /* Adjust as needed */
   }
 }
 

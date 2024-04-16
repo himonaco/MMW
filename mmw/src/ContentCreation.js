@@ -34,7 +34,7 @@ function ContentCreation() {
         </div>
         <div className="card">
             <ActionAreaCard
-              title="Strategic Social Media Management: Crafting Compelling Content & Cultivating a Dynamic Online Presence"
+              title="Strategic Social Media Management"
               description="Engage your audience with captivating content tailored for platforms like Instagram, Facebook, and YouTube. Elevate your brands online presence with strategic social media management and growth strategies."
               link="/strategicsocialmediamanagement"
               image="/assets/image1.jpg"
