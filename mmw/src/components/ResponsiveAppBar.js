@@ -45,9 +45,9 @@ function ResponsiveAppBar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -61,7 +61,11 @@ function ResponsiveAppBar() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppBar position="sticky" sx={{ bgcolor: 'white' }} className={`app-bar ${shrinkLogo ? 'shrink' : ''}`}>
+      <AppBar
+        position="sticky"
+        sx={{ bgcolor: "white" }}
+        className={`app-bar ${shrinkLogo ? "shrink" : ""}`}
+      >
         <Container maxWidth="xl">
           <Toolbar disableGutters className="toolbar">
             <Typography
@@ -103,14 +107,20 @@ function ResponsiveAppBar() {
               </Menu>
             </Box>
             <Typography
-  variant="h5"
-  noWrap
-  component="a"
-  href="#app-bar-with-responsive-menu"
-  className="typography-logo"
->
-  <img src={Logo} alt="Logo" className={`logo ${shrinkLogo ? 'shrink' : ''}`} />
-</Typography>
+              variant="h5"
+              noWrap
+              component="div"
+              href="#app-bar-with-responsive-menu"
+              className="typography-logo"
+            >
+              <Link to="/">
+                <img
+                  src={Logo}
+                  alt="Logo"
+                  className={`logo ${shrinkLogo ? "shrink" : ""}`}
+                />
+              </Link>
+            </Typography>
             <Box className="box-pages">
               {pages.map((page, index) => (
                 <Button key={page.name} className="button">

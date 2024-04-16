@@ -54,6 +54,11 @@
 
 .logo {
     /* Add your styles for the logo here */
+    width: 150px;
+    height: auto;
+    padding-top: 10px;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 .instagram-icon {

@@ -46,6 +46,8 @@
 @media (max-width: 768px) {
     .content {
         max-width: 90vw; /* Increase the width on small screens */
+        margin-top: -650px;
+
     }
 
     .footer {

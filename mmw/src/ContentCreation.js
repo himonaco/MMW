@@ -1,10 +1,9 @@
 import React from "react";
-import ResponsiveAppBar from "./components/ResponsiveAppBarContentCreation";
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import ActionAreaCard from "./components/ActionAreaCard";
 import DefaultFooter from "./components/DefaultFooter";
 import ScrollTopButton from "./components/ScrollTopButton";
 import "./ContentCreation.css";
-import { Link } from "react-router-dom";
 
 
 function ContentCreation() {
@@ -25,30 +24,39 @@ function ContentCreation() {
       </div>
 
       <div className="offerings">
-        <ActionAreaCard
-          title="Drone Content Creation"
-          description="Transform your brand with breathtaking aerial imagery. Showcase properties, events, and landscapes like never before."
-          link="/dronecontentcreation"
-          image="/assets/image1.jpg"
-        />
-        <ActionAreaCard
-          title="Strategic Social Media Management: Crafting Compelling Content & Cultivating a Dynamic Online Presence"
-          description="Engage your audience with captivating content tailored for platforms like Instagram, Facebook, and YouTube. Elevate your brands online presence with strategic social media management and growth strategies."
-          link="/strategicsocialmediamanagement"
-          image="/assets/image1.jpg"
-        />
-        <ActionAreaCard
-          title="Post-Production Services"
-          description="Polish your content to perfection with our professional post-production editing services. From color grading to audio enhancement, we ensure your videos stand out."
-          link="/postproductionservices"
-          image="/assets/image1.jpg"
-        />
-        <ActionAreaCard
-          title="Web Development"
-          description="Crafting stunning websites tailored to your business needs. From sleek designs to seamless functionality, we bring your online presence to life."
-          link="/webdev"
-          image="/assets/webdevelopmentimage.jpg"
-        />
+        <div className="card">
+            <ActionAreaCard
+              title="Drone Content Creation"
+              description="Transform your brand with breathtaking aerial imagery. Showcase properties, events, and landscapes like never before."
+              link="/dronecontentcreation"
+              image="/assets/image1.jpg"
+            />
+        </div>
+        <div className="card">
+            <ActionAreaCard
+              title="Strategic Social Media Management: Crafting Compelling Content & Cultivating a Dynamic Online Presence"
+              description="Engage your audience with captivating content tailored for platforms like Instagram, Facebook, and YouTube. Elevate your brands online presence with strategic social media management and growth strategies."
+              link="/strategicsocialmediamanagement"
+              image="/assets/image1.jpg"
+            />
+        </div>
+        <div className="card">
+            <ActionAreaCard
+              title="Post-Production Services"
+              description="Polish your content to perfection with our professional post-production editing services. From color grading to audio enhancement, we ensure your videos stand out."
+              link="/postproductionservices"
+              image="/assets/image1.jpg"
+            />
+        </div>
+       
+        <div className="card">
+            <ActionAreaCard
+              title="Web Development"
+              description="Crafting stunning websites tailored to your business needs. From sleek designs to seamless functionality, we bring your online presence to life."
+              link="/webdev"
+              image="/assets/webdevelopmentimage.jpg"
+            />
+        </div>
       </div>
       <DefaultFooter />
       <ScrollTopButton />

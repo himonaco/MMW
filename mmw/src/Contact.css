@@ -1,0 +1,67 @@
+/* Base styles */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    
+  }
+  
+  .contact-info, .contact-form {
+    /* margin: 2px 0; */
+    width: 100%;
+  }
+  
+  .contact-info p {
+    line-height: 1.6; /* Adjust the value to increase or decrease the space between lines */
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+    /* width: 50%; */
+  }
+  
+  /* Styles for large screens */
+  @media screen and (min-width: 768px) {
+    .title {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .contact {
+      height: auto;
+    }
+    .contact-content {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    
+    
+  
+    .contact-info {
+      margin: 0 0px;
+      margin-bottom: 60px; 
+      max-width: 500px;
+    }
+    .contact-form
+    {
+        margin: 0 100px;
+        max-width: 400px;
+      }
+  }
+
+  @media screen and (max-width: 767px) {
+    .title {
+        margin-top: 650px;
+    }
+  }
+  
