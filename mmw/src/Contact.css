@@ -1,67 +1,62 @@
 /* Base styles */
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  .contact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    
-  }
-  
-  .contact-info, .contact-form {
-    /* margin: 2px 0; */
-    width: 100%;
-  }
-  
-  .contact-info p {
-    line-height: 1.6; /* Adjust the value to increase or decrease the space between lines */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  .form {
-    flex-direction: column;
-    align-items: center;
-    /* width: 50%; */
-  }
-  
-  /* Styles for large screens */
-  @media screen and (min-width: 768px) {
-    .title {
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.contact-info, .contact-form {
+  width: 100%;
+}
+
+.contact-info p {
+  line-height: 1.6;
+}
+
+.form {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for large screens */
+@media screen and (min-width: 768px) {
+  .title {
       margin-top: 40px;
       margin-bottom: 40px;
-    }
-    .contact {
+  }
+  .contact {
       height: auto;
-    }
-    .contact-content {
+      padding: 50px 0; /* Add padding to reduce headroom */
+  }
+  .contact-content {
       flex-direction: row;
       justify-content: space-around;
-    }
-    
-    
-  
-    .contact-info {
-      margin: 0 0px;
-      margin-bottom: 60px; 
-      max-width: 500px;
-    }
-    .contact-form
-    {
-        margin: 0 100px;
-        max-width: 400px;
-      }
+      padding-bottom: 50px; /* Add padding at the bottom */
   }
+  .contact-info, .contact-form {
+      width: 50%; /* Equal width for both elements */
+      max-width: 500px; /* Limit max-width for better readability */
+  }
+  .contact-info {
+      margin-right: 20px; /* Add margin between elements */
+  }
+}
 
-  @media screen and (max-width: 767px) {
-    .title {
-        margin-top: 520px;
-    }
+/* Styles for small screens */
+@media screen and (max-width: 767px) {
+  .title {
+      margin-top: 40px; /* Adjust the margin-top for better positioning */
   }
-  
+  .contact-content {
+      padding-bottom: 20px; /* Add padding at the bottom for mobile */
+  }
+}
