@@ -6,6 +6,8 @@ import "./Drone.css"; // Import the new CSS file
 import DefaultFooter from "./components/DefaultFooter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ScrollTopButton from "./components/ScrollTopButton";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 
 const theme = createTheme({
   palette: {
@@ -95,17 +97,14 @@ function DroneContentCreation() {
           </section>
 
           {/* Project Section */}
-          <section id="projects">
-            <h2 className="project-title">Projects</h2>
-            {/* Add your project content here */}
-            <MyCarousel />
-          </section>
 
           {/* Contact Section */}
-          <section id="contact">
-            <h2 className="contact-title">Contact Us</h2>
-            <ContactForm />
-          </section>
+          <div className='cta-container'>
+                <p className='cta-text'>Ready to take your content to new heights with aerial photography?</p>
+                <Link to="/contact" className='cta-button'>Contact Us</Link>
+            </div>
+            <div className='deadSpace'>
+            </div>
         </div>
 
         <DefaultFooter />

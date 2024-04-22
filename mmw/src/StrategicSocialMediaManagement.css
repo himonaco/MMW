@@ -1,0 +1,112 @@
+/* Base styles */
+.strategic-social-media {
+    /* Add styles for the main div here */
+}
+
+.content {
+    padding: 5px;
+    max-width: 70vw;
+    margin: auto;
+}
+
+.title, .subtitle {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center; /* Center the description */
+}
+
+.projects-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer {
+    position: static;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+.scroll-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.deadSpace {
+    margin: 90px;
+}
+
+.cta-container {
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.cta-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: black;
+    border: solid 1px ;
+    
+}
+
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90vw; /* Increase the width on small screens */
+        margin-top: 0; /* Remove negative margin-top */
+    }
+
+    .footer {
+        margin-top: 50px; /* Add more space above the footer on small screens */
+    }
+}
+
+
+/* Styles for large screens */
+@media (min-width: 769px) {
+    .content {
+        max-width: 70vw; /* Decrease the width on large screens */
+    }
+
+    .footer {
+        margin-top: 30px; /* Reduce the space above the footer on large screens */
+    }
+}

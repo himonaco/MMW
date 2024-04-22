@@ -6,6 +6,8 @@ import './WebDev.css'; // Import the CSS file
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DefaultFooter from './components/DefaultFooter';
 import ScrollTopButton from "./components/ScrollTopButton";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
 
 
 
@@ -57,18 +59,16 @@ function WebDev() {
         <h2>Get Started Today</h2>
         <p>Ready to take your online presence to the next level? Contact us today to discuss your web development needs and discover how we can help your business thrive in the digital landscape.</p>
 
-        {/* Project Section */}
-        <h2 id="projects" className="projects-title">Projects</h2>
-        {/* Add your project content here */}
-        <MyCarousel />
+      
 
-        {/* Testimonials Section */}
-
-        {/* Contact Section */}
-        <h2 id="contact" className="contact-title">Contact Us</h2>
-        {/* Add your contact content here */}
-        <ContactForm />
+        
       </div>
+      <div className='cta-container'>
+                <p className='cta-text'>Ready to bring your online presence to life?</p>
+                <Link to="/contact" className='cta-button'>Contact Us</Link>
+            </div>
+            <div className='deadSpace'>
+            </div>
       <DefaultFooter />
       <ScrollTopButton />
       

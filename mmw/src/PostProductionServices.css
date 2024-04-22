@@ -1,0 +1,39 @@
+/* Base styles */
+
+
+.content {
+    padding: 20px;
+    max-width: 70vw;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 15px;
+}
+
+
+/* Styles for small screens */
+@media (max-width: 768px) {
+    .content {
+        max-width: 90vw; /* Increase the width on small screens */
+    }
+   
+}
+
+/* Styles for large screens */
+@media (min-width: 769px) {
+    .content {
+        max-width: 70vw; /* Decrease the width on large screens */
+    }
+
+    
+}

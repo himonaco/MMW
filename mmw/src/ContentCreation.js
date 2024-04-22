@@ -4,6 +4,7 @@ import ActionAreaCard from "./components/ActionAreaCard";
 import DefaultFooter from "./components/DefaultFooter";
 import ScrollTopButton from "./components/ScrollTopButton";
 import "./ContentCreation.css";
+import { Link } from "react-router-dom";
 
 
 function ContentCreation() {
@@ -58,6 +59,12 @@ function ContentCreation() {
             />
         </div>
       </div>
+      <div className='cta-container'>
+                <p className='cta-text'>Ready to transform your brand's online presence?</p>
+                <Link to="/contact" className='cta-button'>Contact Us</Link>
+            </div>
+            <div className='deadSpace'>
+            </div>
       <DefaultFooter />
       <ScrollTopButton />
     </div>
