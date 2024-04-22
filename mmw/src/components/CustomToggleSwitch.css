@@ -1,0 +1,55 @@
+/* CustomToggleSwitch.css */
+
+.custom-toggle-switch {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+  }
+  
+  .custom-toggle-switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 50px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-switch .slider {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s ease;
+    transform: translateY(-50%);
+  }
+  
+  .toggle-switch.checked .slider {
+    transform: translateX(100%);
+  }
+  
+  .toggle-switch svg {
+    margin: 0 4px; /* Adjust icon margin as needed */
+  }
+  
+  .label {
+    margin-left: 8px; /* Adjust label margin as needed */
+  }
+  
+  .toggle-image {
+    width: 20px; /* Adjust image size as needed */
+    height: 20px;
+    margin-right: 8px; /* Adjust margin as needed */
+  }
+  

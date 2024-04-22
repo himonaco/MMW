@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next"; // Import useTranslation hook
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import AppBar from "@mui/material/AppBar";
@@ -15,6 +16,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import Logo from "../assets/logofull1.png";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./ResponsiveAppBar.css";
+import "../i18n";
+import CountryFlag from "react-country-flag"; // Import CountryFlag component
 
 const theme = createTheme({
   palette: {
@@ -35,6 +38,7 @@ const pages = [
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [shrinkLogo, setShrinkLogo] = useState(false);
+  const { t, i18n } = useTranslation(); // Destructure t and i18n from useTranslation
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,6 +61,12 @@ function ResponsiveAppBar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleLanguageToggle = () => {
+    // Toggle between 'en' and 'fr' languages
+    const newLanguage = i18n.language === "en" ? "fr" : "en";
+    i18n.changeLanguage(newLanguage); // Change the language
   };
 
   return (
@@ -128,17 +138,44 @@ function ResponsiveAppBar() {
                 </Button>
               ))}
             </Box>
-            <IconButton
-              size="large"
-              aria-label="instagram"
-              color="primary"
-              component="a"
-              href="https://www.instagram.com/monacomediaworks/"
-              target="_blank"
-              className="instagram-icon"
-            >
-              <InstagramIcon style={{ fontSize: 40 }} />
-            </IconButton>
+            <div className="icons">
+              <IconButton
+                size="large"
+                aria-label="instagram"
+                color="primary"
+                component="a"
+                href="https://www.instagram.com/monacomediaworks/"
+                target="_blank"
+                className="instagram-icon"
+              >
+                <InstagramIcon style={{ fontSize: 40 }} />
+              </IconButton>
+              <Box className="box-flags">
+                <a href="#" onClick={handleLanguageToggle}>
+                  {i18n.language === "en" ? (
+                    <CountryFlag
+                      countryCode="FR"
+                      svg
+                      style={{
+                        width: "30px",
+                        height: "auto",
+                        borderRadius: "50%",
+                      }}
+                    />
+                  ) : (
+                    <CountryFlag
+                      countryCode="GB"
+                      svg
+                      style={{
+                        width: "30px",
+                        height: "auto",
+                        borderRadius: "50%",
+                      }}
+                    />
+                  )}
+                </a>
+              </Box>
+            </div>
           </Toolbar>
         </Container>
       </AppBar>

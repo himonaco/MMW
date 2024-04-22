@@ -8,7 +8,7 @@ function ScrollTopButton() {
 
   // Show button when page is scrolled up to given distance
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 100) {
       setIsVisible(true);
     } else {
       setIsVisible(false);

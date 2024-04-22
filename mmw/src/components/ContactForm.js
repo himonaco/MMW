@@ -3,8 +3,11 @@ import emailjs from 'emailjs-com';
 import { Box } from '@mui/material';
 import { Toaster, toast } from 'react-hot-toast';
 import './ContactForm.css'; // Import the CSS file
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 
 const ContactForm = () => {
+  const { t } = useTranslation(); // Destructure t from useTranslation
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,11 +31,11 @@ const ContactForm = () => {
     emailjs.send(serviceId, templateId, formData, userId)
       .then((response) => {
         console.log('Email sent successfully:', response);
-        toast.success('Message sent successfully!', { duration: 4000, icon: '🚀', position: 'bottom-center' });
+        toast.success(t('contactForm.successMessage'), { duration: 4000, icon: '🚀', position: 'bottom-center' });
       })
       .catch((error) => {
         console.error('Email sending failed:', error);
-        toast.error('Message sending failed. Please try again later.', { duration: 4000, icon: '❌', position: 'bottom-center' });
+        toast.error(t('contactForm.errorMessage'), { duration: 4000, icon: '❌', position: 'bottom-center' });
       });
 
     setFormData({
@@ -52,7 +55,7 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Name"
+            placeholder={t('contactForm.namePlaceholder')}
             required
             className="input"
           />
@@ -63,7 +66,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Email"
+            placeholder={t('contactForm.emailPlaceholder')}
             required
             className="input"
           />
@@ -73,12 +76,12 @@ const ContactForm = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Message"
+            placeholder={t('contactForm.messagePlaceholder')}
             required
             className="textarea"
           />
         </div>
-        <button type="submit" className="button">Send Message</button>
+        <button type="submit" className="button">{t('contactForm.sendButton')}</button>
       </form>
     </Box>
   );

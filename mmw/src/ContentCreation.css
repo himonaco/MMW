@@ -24,7 +24,7 @@
 
 .action-card {
   width: calc(50% - 20px);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -82,4 +82,8 @@
 
 .action-card-button:hover {
   background-color: #0056b3;
+}
+
+.cta-container {
+  margin-bottom: 70px;
 }

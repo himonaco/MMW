@@ -7,9 +7,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DefaultFooter from './components/DefaultFooter';
 import ScrollTopButton from "./components/ScrollTopButton";
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
-
-
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import enData from './locales/en.json'; // Import English JSON data
+import frData from './locales/fr.json'; // Import French JSON data
 
 const theme = createTheme({
   palette: {
@@ -20,58 +20,45 @@ const theme = createTheme({
 });
 
 function WebDev() {
+  const { t, i18n } = useTranslation(); // Destructure t and i18n from useTranslation
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Determine which JSON data to use based on the current language
+  const jsonData = i18n.language === 'fr' ? frData : enData;
+
+  if (!jsonData.webDev) {
+    return <div>Loading...</div>;
+  }
+
+  const { sections, ctaText, ctaButton } = jsonData.webDev;
+
   return (
     <ThemeProvider theme={theme}>
-    <div className="webdev">
-      <ResponsiveAppBar />
+      <div className="webdev">
+        <ResponsiveAppBar />
 
-      <div className="content">
-         {/* Web Development Services Section */}
-         <h1 id="services" className="title">Web Development Services</h1>
-        <p>At Monaco Media Works, we specialize in providing comprehensive web development services tailored to meet the unique needs of your business. With a focus on delivering cutting-edge solutions, we offer a range of services to enhance your online presence and drive success.</p>
-        
-        <h2>Tailored Solutions for Your Business</h2>
-        <p>Our expert team of developers is proficient in creating custom websites from scratch, ensuring that each site is uniquely designed to reflect your brand identity and goals. From simple informational websites to complex e-commerce platforms, we have the expertise to bring your vision to life.</p>
-        
-        <h2>Website Building</h2>
-        <p>Our expert team of developers is proficient in creating custom websites from scratch, ensuring that each site is uniquely designed to reflect your brand identity and goals. From simple informational websites to complex e-commerce platforms, we have the expertise to bring your vision to life.</p>
-        
-        <h2>Application Development</h2>
-        <p>In today's digital landscape, having a mobile application can significantly enhance your business's reach and engagement. We develop custom applications for both iOS and Android platforms, offering seamless user experiences and powerful functionalities.</p>
-        
-        <h2>Server Solutions</h2>
-        <p>Reliable server infrastructure is crucial for the performance and security of your online presence. We provide robust server solutions tailored to your business requirements, ensuring optimal performance, scalability, and data protection.</p>
-        
-        <h2>Database Management</h2>
-        <p>Efficient management of your databases is essential for maintaining data integrity and ensuring seamless operations. Our database management services encompass everything from database design and optimization to data migration and maintenance.</p>
-        
-        <h2>E-commerce Solutions</h2>
-        <p>For businesses looking to expand their online sales channels, we offer comprehensive e-commerce solutions. From setting up online stores to integrating payment gateways and optimizing product listings, we help you establish a successful online sales platform.</p>
-        
-        <h2>Ongoing Support and Maintenance</h2>
-        <p>Our commitment to your success extends beyond the initial development phase. We provide ongoing support and maintenance services to ensure that your website or application continues to perform optimally and remains secure against evolving threats.</p>
-        
-        <h2>Get Started Today</h2>
-        <p>Ready to take your online presence to the next level? Contact us today to discuss your web development needs and discover how we can help your business thrive in the digital landscape.</p>
+        <div className="content">
+          {/* Render sections dynamically */}
+          {sections && Object.values(sections).map((section, index) => (
+            <section key={index} id={section.id}>
+              <h2 className="title">{section.title}</h2>
+              <p>{section.content}</p>
+            </section>
+          ))}
+        </div>
 
-      
-
+        <div className='cta-container'>
+          <p className='cta-text'>{ctaText}</p>
+          <Link to="/contact" className='cta-button'>{ctaButton}</Link>
+        </div>
         
-      </div>
-      <div className='cta-container'>
-                <p className='cta-text'>Ready to bring your online presence to life?</p>
-                <Link to="/contact" className='cta-button'>Contact Us</Link>
-            </div>
-            <div className='deadSpace'>
-            </div>
-      <DefaultFooter />
-      <ScrollTopButton />
-      
+        <div className='deadSpace'></div>
+        
+        <DefaultFooter />
+        <ScrollTopButton />
       </div>
     </ThemeProvider>
   );

@@ -7,10 +7,10 @@
     padding: 5px;
     max-width: 70vw;
     margin: auto;
+    text-align: center;
 }
 
 .title, .subtitle {
-    text-align: center;
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -19,7 +19,6 @@
 .description {
     font-size: 16px;
     margin-bottom: 15px;
-    text-align: center; /* Center the description */
 }
 
 .projects-title {
@@ -52,9 +51,6 @@
     right: 20px;
 }
 
-.deadSpace {
-    margin: 90px;
-}
 
 .cta-container {
     padding: 20px;
@@ -76,7 +72,7 @@
     border-radius: 4px;
     transition: background-color 0.3s ease;
     border-radius: 20px;
-
+    
 }
 
 .cta-button:hover {
@@ -84,6 +80,9 @@
     color: black;
     border: solid 1px ;
     
+}
+.deadSpace {
+    margin: 90px;
 }
 
 

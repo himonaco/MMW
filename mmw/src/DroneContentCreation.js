@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
-import MyCarousel from "./components/MyCarousel";
-import ContactForm from "./components/ContactForm";
 import "./Drone.css"; // Import the new CSS file
 import DefaultFooter from "./components/DefaultFooter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ScrollTopButton from "./components/ScrollTopButton";
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 
 const theme = createTheme({
   palette: {
@@ -18,6 +16,8 @@ const theme = createTheme({
 });
 
 function DroneContentCreation() {
+  const { t } = useTranslation(); // Destructure t from useTranslation
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -31,80 +31,29 @@ function DroneContentCreation() {
           {/* Drone Services Section */}
           <section id="services">
             <h3 className="description">
-              At <span className="highlight">Monaco Media Works</span>, we
-              specialize in providing cutting-edge aerial photography and
-              videography services tailored to meet your unique needs. With our
-              state-of-the-art FPV drones and expert team, we offer a range of
-              services to enhance your brand's visual storytelling.
+              {t("droneContentCreation.description")}
             </h3>
-            <h2 className="sub-title">Our Services Include:</h2>
+            <h2 className="sub-title">{t("droneContentCreation.title")}</h2>
             <ul className="services-list">
-              <li>
-                <strong>Real Estate Content Creation:</strong> Showcase
-                properties like never before with our stunning aerial shots and
-                captivating videos. From panoramic views to detailed close-ups,
-                we highlight the beauty and uniqueness of each property from
-                breathtaking perspectives.
-              </li>
-              <li>
-                <strong>Yacht Promotional Content:</strong> Sail into the
-                spotlight with our captivating aerial footage and immersive
-                videos showcasing the luxury and elegance of your yacht. Impress
-                potential buyers and charter clients with visually stunning
-                visuals that set you apart from the competition.
-              </li>
-              <li>
-                <strong>Social Media Presence Services:</strong> Elevate your
-                social media presence with engaging content tailored for
-                platforms like Instagram, Facebook, and YouTube. Our specialized
-                services include:
-                <ul>
-                  <li>
-                    Instagram Reels: Create dynamic and eye-catching short
-                    videos that captivate your audience and increase engagement.
-                  </li>
-                  <li>
-                    Video Production: Produce high-quality videos for your
-                    social media channels, including product showcases, brand
-                    stories, and promotional campaigns.
-                  </li>
-                  <li>
-                    Shorts: Craft short, attention-grabbing videos optimized for
-                    platforms like TikTok and Instagram Stories.
-                  </li>
-                  <li>
-                    Posts Copywriting: Develop compelling copy for your social
-                    media posts that resonates with your audience and drives
-                    action.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Post Production Editing:</strong> Enhance your content
-                with our professional post-production editing services. From
-                color grading to audio enhancement, we ensure that your videos
-                are polished to perfection before they reach your audience.
-              </li>
+              {t("droneContentCreation.services", { returnObjects: true }).map((service, index) => (
+                <li key={index}>
+                  <strong>{service.title}</strong> {service.description}
+                </li>
+              ))}
             </ul>
-            <h2 className="sub-title">Why Choose Us:</h2>
+            <h2 className="sub-title">{t("droneContentCreation.whyChooseUs")}</h2>
             <p className="why-us">
-              Professionalism, creativity, quality, and customer satisfaction
-              are the pillars of our service. Ready to elevate your brand with
-              stunning aerial content and captivating social media presence?
-              Contact us today to discuss your project requirements and let us
-              bring your vision to life!
+              {t("droneContentCreation.whyUs")}
             </p>
           </section>
 
-          {/* Project Section */}
-
           {/* Contact Section */}
           <div className='cta-container'>
-                <p className='cta-text'>Ready to take your content to new heights with aerial photography?</p>
-                <Link to="/contact" className='cta-button'>Contact Us</Link>
-            </div>
-            <div className='deadSpace'>
-            </div>
+            <p className='cta-text'>{t("droneContentCreation.ctaText")}</p>
+            <Link to="/contact" className='cta-button'>{t("droneContentCreation.ctaButton")}</Link>
+          </div>
+          <div className='deadSpace'>
+          </div>
         </div>
 
         <DefaultFooter />

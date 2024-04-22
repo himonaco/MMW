@@ -3,31 +3,32 @@ import ContactForm from './components/ContactForm';
 import './Contact.css';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import DefaultFooter from "./components/DefaultFooter";
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import enData from './locales/en.json'; // Import English JSON data
+import frData from './locales/fr.json'; // Import French JSON data
 
 const Contact = () => {
+    const { t, i18n } = useTranslation(); // Destructure t and i18n from useTranslation
+
+    // Determine which JSON data to use based on the current language
+    const jsonData = i18n.language === 'fr' ? frData : enData;
+
+    if (!jsonData.contact) {
+        return <div>Loading...</div>;
+    }
+
+    const { title, contactContent } = jsonData.contact;
+
     return (
         <div>
-                <ResponsiveAppBar />
+            <ResponsiveAppBar />
             <div className='contact'>
-                <h1 className='title'>Contact Us</h1>
+                <h1 className='title'>{title}</h1>
                 <div className='contact-content'>
                     <div className='contact-info'>
-                        <p>
-                            We're thrilled that you're considering Monaco Media Works for your content creation needs!
-                            Whether you have questions about our services, want to discuss a potential project,
-                            or simply want to say hello, we're here to help.
-                        </p>
-                        <p>
-                            Our team is passionate about bringing your vision to life through stunning visuals,
-                            captivating content, and professional post-production services. We understand the importance
-                            of effective communication and collaboration, and we're dedicated to providing you with
-                            personalized attention and tailored solutions.
-                        </p>
-                        <p>
-                            Don't hesitate to reach out to us using the form below.
-                            We can't wait to hear from you and explore how we can work together to
-                            elevate your brand's online presence and tell your story in the most compelling way.
-                        </p>
+                        {contactContent.map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))}
                         {/* Add any additional contact information here */}
                     </div>
                     <div className='form'>
