@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import DefaultFooter from "./components/DefaultFooter";
 import ScrollTopButton from "./components/ScrollTopButton";
@@ -11,6 +11,10 @@ import "./StrategicSocialMediaManagement.css";
 function StrategicSocialMediaManagement() {
   const { t, i18n } = useTranslation(); // Initialize useTranslation hook
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Function to handle language toggle
   const handleLanguageToggle = () => {
     const newLanguage = i18n.language === "en" ? "fr" : "en";
@@ -18,9 +22,8 @@ function StrategicSocialMediaManagement() {
   };
 
   return (
-      <div>
+    <div>
       <ResponsiveAppBar handleLanguageToggle={handleLanguageToggle} />{" "}
-      {/* Pass handleLanguageToggle as prop */}
       <div className="content">
         <h1 className="title">{t("strategicSocialMediaManagement.title")}</h1>
         <p className="description">

@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
-import MyCarousel from './components/MyCarousel';
-import ContactForm from './components/ContactForm';
 import './WebDev.css'; // Import the CSS file
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DefaultFooter from './components/DefaultFooter';
@@ -20,7 +18,7 @@ const theme = createTheme({
 });
 
 function WebDev() {
-  const { t, i18n } = useTranslation(); // Destructure t and i18n from useTranslation
+  const { i18n } = useTranslation(); // Destructure t and i18n from useTranslation
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -45,7 +43,7 @@ function WebDev() {
           {sections && Object.values(sections).map((section, index) => (
             <section key={index} id={section.id}>
               <h2 className="title">{section.title}</h2>
-              <p>{section.content}</p>
+              <p className='sub-title'>{section.content}</p>
             </section>
           ))}
         </div>

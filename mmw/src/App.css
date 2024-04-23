@@ -1,6 +1,9 @@
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Add this line to apply the Montserrat font */
 }
+
+
 
 .App-logo {
   height: 40vmin;

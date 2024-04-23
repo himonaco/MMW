@@ -20,25 +20,25 @@
       "offerings": [
         {
           "title": "Drone Content Creation",
-          "description": "Transform your brand with breathtaking aerial imagery. Showcase properties, events, and landscapes like never before.",
+          "descriptions": "Transform your brand with breathtaking aerial imagery. Showcase properties, events, and landscapes like never before.",
           "link": "/dronecontentcreation",
           "image": "/dronecontent.jpg"
         },
         {
           "title": "Strategic Social Media Management",
-          "description": "Engage your audience with captivating content tailored for platforms like Instagram, Facebook, and YouTube. Elevate your brand's online presence with strategic social media management and growth strategies.",
+          "descriptions": "Engage your audience with captivating content tailored for platforms like Instagram, Facebook, and YouTube. Elevate your brand's online presence with strategic social media management and growth strategies.",
           "link": "/strategicsocialmediamanagement",
           "image": "/social.png"
         },
         {
           "title": "Post-Production Services",
-          "description": "Polish your content to perfection with our professional post-production editing services. From color grading to audio enhancement, we ensure your videos stand out.",
+          "descriptions": "Polish your content to perfection with our professional post-production editing services. From color grading to audio enhancement, we ensure your videos stand out.",
           "link": "/postproductionservices",
           "image": "/video.png"
         },
         {
           "title": "Web Development",
-          "description": "Crafting stunning websites tailored to your business needs. From sleek designs to seamless functionality, we bring your online presence to life.",
+          "descriptions": "Crafting stunning websites tailored to your business needs. From sleek designs to seamless functionality, we bring your online presence to life.",
           "link": "/webdev",
           "image": "/web.avif"
         }
@@ -48,30 +48,31 @@
     },
     "droneContentCreation": {
       "title": "Drone Content Creation",
-      "description": "At Monaco Media Works, we offer a comprehensive suite of content creation services tailored to elevate your brand's online presence. From stunning aerial photography to captivating social media content and professional post-production services, we specialize in bringing your vision to life. Explore our offerings below to discover how we can help you tell your story in the most compelling way.",
+      "description": "At Monaco Media Works, we specialize in providing cutting-edge drone photography and videography services tailored to elevate your brand's online presence. Our team of skilled drone operators and content creators are dedicated to capturing stunning aerial imagery and video footage that sets your brand apart. Whether you're in real estate, organizing events like weddings, birthdays, or corporate functions, or you're a business looking to promote with captivating aerial content, we've got you covered.",
       "services": [
         {
-          "title": "Drone Content Creation",
-          "description": "Transform your brand with breathtaking aerial imagery. Showcase properties, events, and landscapes like never before."
+          "title": "Aerial Photography",
+          "description": "Transform your brand with breathtaking aerial imagery. Showcase properties, events, and landscapes like never before. Our high-resolution aerial photographs provide a unique perspective that captivates your audience and enhances your brand's visual identity."
         },
         {
-          "title": "Strategic Social Media Management",
-          "description": "Engage your audience with captivating content tailored for platforms like Instagram, Facebook, and YouTube. Elevate your brand's online presence with strategic social media management and growth strategies."
+          "title": "Aerial Videography",
+          "description": "Engage your audience with dynamic aerial video footage. From sweeping panoramas to cinematic flyovers, our drone videography services bring your story to life in stunning detail. Whether you're creating promotional videos, event highlights, or immersive brand experiences, our aerial videos leave a lasting impression."
         },
         {
-          "title": "Post-Production Services",
-          "description": "Polish your content to perfection with our professional post-production editing services. From color grading to audio enhancement, we ensure your videos stand out."
+          "title": "360-Degree Virtual Tours",
+          "description": "Immerse your audience in interactive 360-degree virtual tours of your properties or event venues. Our drone-powered virtual tours offer an engaging way for viewers to explore spaces from every angle, providing an immersive experience that drives engagement and enhances decision-making for potential clients or attendees."
         },
         {
-          "title": "Web Development",
-          "description": "Crafting stunning websites tailored to your business needs. From sleek designs to seamless functionality, we bring your online presence to life."
+          "title": "Customized Content Packages",
+          "description": "Tailor our drone content creation services to suit your specific needs with our customized content packages. Whether you're looking for a one-time aerial photoshoot or a comprehensive ongoing content strategy, we work closely with you to design a package that aligns with your goals, budget, and timeline."
         }
       ],
       "whyChooseUs": "Why Choose Us",
-      "whyUs": "Professionalism, creativity, quality, and customer satisfaction are the pillars of our service. Ready to elevate your brand with stunning aerial content and captivating social media presence? Contact us today to discuss your project requirements and let us bring your vision to life!",
+      "whyUs": "At Monaco Media Works, we are committed to delivering excellence in every aspect of our drone content creation services. Our team combines technical expertise with creative vision to produce compelling content that resonates with your audience and drives results for your brand. With a focus on professionalism, creativity, quality, and customer satisfaction, we go above and beyond to ensure that your brand's aerial content stands out from the competition.",
       "ctaText": "Ready to transform your brand's online presence?",
       "ctaButton": "Contact Us"
     },
+    
     "postProductionServices": {
       "title": "Post-Production Services",
       "description": "Welcome to Monaco Media Works' Post-Production Services page! Our post-production team specializes in bringing your raw footage to life through creative editing, visual effects, and professional finishing touches. Whether you've captured stunning aerial shots with a drone or captivating scenes with a camera, our experts are here to transform your footage into compelling content that resonates with your audience.",

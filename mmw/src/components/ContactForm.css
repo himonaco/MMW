@@ -67,7 +67,7 @@
 /* Styles for large screens */
 @media (min-width: 769px) {
     .container {
-        max-width: 600px; /* Decrease the width on large screens */
+        max-width: 500px; /* Decrease the width on large screens */
     }
 
     .button {

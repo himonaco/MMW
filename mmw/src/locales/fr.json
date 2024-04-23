@@ -17,25 +17,25 @@
       "offerings": [
         {
           "title": "Création de contenu avec drone",
-          "description": "Transformez votre marque avec des images aériennes à couper le souffle. Présentez des propriétés, des événements et des paysages comme jamais auparavant.",
+          "descriptions": "Transformez votre marque avec des images aériennes à couper le souffle. Présentez des propriétés, des événements et des paysages comme jamais auparavant.",
           "link": "/dronecontentcreation",
           "image": "/dronecontent.jpg"
         },
         {
           "title": "Gestion stratégique des médias sociaux",
-          "description": "Engagez votre public avec un contenu captivant adapté aux plateformes telles que Instagram, Facebook et YouTube. Rehaussez la présence en ligne de votre marque avec une gestion stratégique des médias sociaux et des stratégies de croissance.",
+          "descriptions": "Engagez votre public avec un contenu captivant adapté aux plateformes telles que Instagram, Facebook et YouTube. Rehaussez la présence en ligne de votre marque avec une gestion stratégique des médias sociaux et des stratégies de croissance.",
           "link": "/strategicsocialmediamanagement",
           "image": "/social.png"
         },
         {
           "title": "Services de post-production",
-          "description": "Affinez votre contenu à la perfection avec nos services professionnels de montage. De l'étalonnage des couleurs à l'amélioration audio, nous veillons à ce que vos vidéos se démarquent.",
+          "descriptions": "Affinez votre contenu à la perfection avec nos services professionnels de montage. De l'étalonnage des couleurs à l'amélioration audio, nous veillons à ce que vos vidéos se démarquent.",
           "link": "/postproductionservices",
           "image": "/video.png"
         },
         {
           "title": "Développement Web",
-          "description": "Création de sites Web époustouflants adaptés à vos besoins commerciaux. Des designs élégants à la fonctionnalité sans faille, nous donnons vie à votre présence en ligne.",
+          "descriptions": "Création de sites Web époustouflants adaptés à vos besoins commerciaux. Des designs élégants à la fonctionnalité sans faille, nous donnons vie à votre présence en ligne.",
           "link": "/webdev",
           "image": "/web.avif"
         }
@@ -44,28 +44,28 @@
       "ctaButton": "Contactez-nous"
     },
     "droneContentCreation": {
-      "title": "Création de contenu avec drone",
-      "description": "Chez Monaco Media Works, nous offrons une gamme complète de services de création de contenu conçus pour rehausser la présence en ligne de votre marque. De la photographie aérienne époustouflante au contenu captivant des médias sociaux et aux services professionnels de post-production, nous nous spécialisons dans la concrétisation de votre vision. Explorez nos offres ci-dessous pour découvrir comment nous pouvons vous aider à raconter votre histoire de la manière la plus convaincante.",
+      "title": "Création de Contenu par Drone",
+      "description": "Chez Monaco Media Works, nous sommes spécialisés dans la fourniture de services de photographie et de vidéographie par drone de pointe, conçus pour rehausser la présence en ligne de votre marque. Notre équipe d'opérateurs de drone et de créateurs de contenu qualifiés est dédiée à la capture d'images aériennes et de séquences vidéo à couper le souffle qui démarquent votre marque. Que vous soyez dans l'immobilier, l'organisation d'événements comme les mariages, les anniversaires ou les fonctions d'entreprise, ou que vous soyez une entreprise souhaitant promouvoir avec du contenu aérien captivant, nous avons ce qu'il vous faut.",
       "services": [
         {
-          "title": "Création de contenu avec drone",
-          "description": "Transformez votre marque avec des images aériennes à couper le souffle. Présentez des propriétés, des événements et des paysages comme jamais auparavant."
+          "title": "Photographie Aérienne",
+          "description": "Transformez votre marque avec des images aériennes à couper le souffle. Présentez des propriétés, des événements et des paysages comme jamais auparavant. Nos photographies aériennes haute résolution offrent une perspective unique qui captive votre public et renforce l'identité visuelle de votre marque."
         },
         {
-          "title": "Gestion stratégique des médias sociaux",
-          "description": "Engagez votre public avec un contenu captivant adapté aux plateformes telles que Instagram, Facebook et YouTube. Rehaussez la présence en ligne de votre marque avec une gestion stratégique des médias sociaux et des stratégies de croissance."
+          "title": "Vidéographie Aérienne",
+          "description": "Engagez votre public avec des séquences vidéo aériennes dynamiques. Des panoramas grandioses aux survols cinématographiques, nos services de vidéographie par drone donnent vie à votre histoire dans les moindres détails. Que vous créiez des vidéos promotionnelles, des points forts d'événements ou des expériences de marque immersives, nos vidéos aériennes laissent une impression durable."
         },
         {
-          "title": "Services de post-production",
-          "description": "Affinez votre contenu à la perfection avec nos services professionnels de montage. De l'étalonnage des couleurs à l'amélioration audio, nous veillons à ce que vos vidéos se démarquent."
+          "title": "Visites Virtuelles à 360 Degrés",
+          "description": "Plongez votre public dans des visites virtuelles interactives à 360 degrés de vos propriétés ou de vos lieux d'événements. Nos visites virtuelles alimentées par drone offrent une manière engageante pour les spectateurs d'explorer les espaces sous tous les angles, offrant une expérience immersive qui favorise l'engagement et améliore la prise de décision pour les clients potentiels ou les participants."
         },
         {
-          "title": "Développement Web",
-          "description": "Création de sites Web époustouflants adaptés à vos besoins commerciaux. Des designs élégants à la fonctionnalité sans faille, nous donnons vie à votre présence en ligne."
+          "title": "Forfaits de Contenu Personnalisés",
+          "description": "Adaptez nos services de création de contenu par drone à vos besoins spécifiques avec nos forfaits de contenu personnalisés. Que vous recherchiez une séance photo aérienne ponctuelle ou une stratégie de contenu complète et continue, nous travaillons en étroite collaboration avec vous pour concevoir un forfait qui répond à vos objectifs, votre budget et votre calendrier."
         }
       ],
-      "whyChooseUs": "Pourquoi nous choisir",
-      "whyUs": "Le professionnalisme, la créativité, la qualité et la satisfaction de la clientèle sont les piliers de notre service. Prêt à rehausser votre marque avec un contenu aérien époustouflant et une présence captivante sur les réseaux sociaux ? Contactez-nous dès aujourd'hui pour discuter de vos besoins en matière de projet et laissez-nous concrétiser votre vision !",
+      "whyChooseUs": "Pourquoi Nous Choisir",
+      "whyUs": "Chez Monaco Media Works, nous nous engageons à fournir l'excellence dans tous les aspects de nos services de création de contenu par drone. Notre équipe associe expertise technique et vision créative pour produire un contenu convaincant qui résonne avec votre public et génère des résultats pour votre marque. Avec un accent sur le professionnalisme, la créativité, la qualité et la satisfaction du client, nous allons au-delà pour nous assurer que le contenu aérien de votre marque se démarque de la concurrence.",
       "ctaText": "Prêt à transformer la présence en ligne de votre marque ?",
       "ctaButton": "Contactez-nous"
     },

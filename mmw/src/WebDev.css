@@ -1,7 +1,4 @@
-/* Base styles */
-.webdev {
-    /* Add styles for the main div here */
-}
+
 
 .content {
     padding: 20px;
@@ -11,7 +8,7 @@
 
 .title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
 }
 
 .description {
@@ -26,6 +23,12 @@
 .contact-title {
     margin-bottom: 30px;
     text-align: center;
+}
+
+.sub-title {
+    font-size: 18px !important;
+    line-height: 1.5;
+    font-weight: 400 !important;
 }
 
 .footer {

@@ -14,8 +14,16 @@
   width: 80%;
 }
 
-.contact-info, .contact-form {
+.contact-info,
+.contact-form {
   width: 100%;
+}
+
+.contact-info {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  font-size: 16px;
+ 
 }
 
 .contact-info p {
@@ -30,33 +38,45 @@
 /* Styles for large screens */
 @media screen and (min-width: 768px) {
   .title {
-      margin-top: 40px;
-      margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .contact {
-      height: auto;
-      padding: 50px 0; /* Add padding to reduce headroom */
+    height: auto;
+    padding: 50px 0; /* Add padding to reduce headroom */
   }
   .contact-content {
-      flex-direction: row;
-      justify-content: space-around;
-      padding-bottom: 50px; /* Add padding at the bottom */
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 50px; /* Add padding at the bottom */
   }
-  .contact-info, .contact-form {
-      width: 50%; /* Equal width for both elements */
-      max-width: 500px; /* Limit max-width for better readability */
+
+ 
+  .contact-info,
+  .contact-form {
+    width: 50%; /* Equal width for both elements */
+    max-width: 500px; /* Limit max-width for better readability */
   }
   .contact-info {
-      margin-right: 20px; /* Add margin between elements */
+    margin-right: 20px; /* Add margin between elements */
+    padding-right: 60px;
+    padding-left: 60px;
   }
 }
 
 /* Styles for small screens */
 @media screen and (max-width: 767px) {
   .title {
-      margin-top: 40px; /* Adjust the margin-top for better positioning */
+    margin-top: 40px; /* Adjust the margin-top for better positioning */
   }
   .contact-content {
-      padding-bottom: 20px; /* Add padding at the bottom for mobile */
+    padding-bottom: 20px; /* Add padding at the bottom for mobile */
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 5px;
   }
 }
+

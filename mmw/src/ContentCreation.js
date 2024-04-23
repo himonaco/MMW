@@ -33,7 +33,7 @@ function ContentCreation() {
           <div className="card" key={index}>
             <ActionAreaCard
               title={offering.title}
-              description={offering.description}
+              description={offering.descriptions}
               link={offering.link}
               image={offering.image}
             />

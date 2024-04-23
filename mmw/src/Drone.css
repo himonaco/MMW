@@ -4,6 +4,24 @@
     margin: auto;
 }
 
+.sub-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vw;
+    margin-top: 60px !important;
+}
+
+.description {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+
+
 /* Styles for small screens */
 @media (max-width: 768px) {
     .drone .content {
@@ -23,9 +41,7 @@
         max-width: 70vw;
     }
 
-    .description {
-        padding: 0 10vw;
-    }
+    
 }
 
 #services .title {
@@ -50,12 +66,29 @@
 }
 
 .services-list {
+    margin-top: 60px;
     margin-bottom: 20px;
-}
+    list-style-type: none; /* Remove bullets from the list */
+    background-color: whitesmoke;
+    border-radius: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}   
+
+.service-item {
+    margin-bottom: 40px; /* Adjust the spacing as needed */
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
 
 .why-us {
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.9;
+    font-size: 18px;
+
 }
 
 #projects .project-title {
@@ -68,3 +101,7 @@
     text-align: center;
 }
 
+.sub-title{
+    margin-top: 60px;
+
+}

@@ -1,20 +1,39 @@
 .app-bar {
     background-color: white;
     color: black;
+   
 }
 
 .toolbar {
-    /* Add your styles for the toolbar here */
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center; /* Center items vertically */
+
 }
 
-.typography {
-    margin-right: 2rem;
-    display: none;
-    font-family: monospace;
-    font-weight: 700;
-    letter-spacing: .3rem;
-    color: inherit;
-    text-decoration: none;
+
+.typography-logo {
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  color: inherit;
+  text-decoration: none;
+  margin-right: 2rem; /* Adjust the margin as needed */
+}
+
+.menu-icon-section,
+.icons-section {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.menu-icon-section {
+  flex-grow: 1; /* Allow menu icon to grow to take available space */
+}
+
+.icons-section {
+  display: flex;
+  align-items: center;
 }
 
 .box {
@@ -60,8 +79,10 @@
     padding-top: 10px;
     align-items: center;
     padding-bottom: 10px;
-    margin-right: auto;
+    /* margin-right: auto;
     margin-left: auto;
+    max-width: 100vw; */
+
 }
 
 .instagram-icon {

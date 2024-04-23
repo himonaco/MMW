@@ -27,7 +27,7 @@ const Contact = () => {
                 <div className='contact-content'>
                     <div className='contact-info'>
                         {contactContent.map((paragraph, index) => (
-                            <p key={index}>{paragraph}</p>
+                            <p className='text' key={index}>{paragraph}</p>
                         ))}
                         {/* Add any additional contact information here */}
                     </div>
