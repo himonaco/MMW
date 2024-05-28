@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import './WebDev.css'; // Import the CSS file
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -36,6 +37,16 @@ function WebDev() {
   return (
     <ThemeProvider theme={theme}>
       <div className="webdev">
+        {/* Add Helmet for meta tags */}
+        <Helmet>
+          <title>{jsonData.webDev.title} - Monaco Media Works</title>
+          <meta name="description" content={jsonData.webDev.description} />
+          <meta name="keywords" content="web development, media services, Monaco Media Works, website design, website development" />
+          <meta property="og:title" content={`${jsonData.webDev.title} - Monaco Media Works`} />
+          <meta property="og:description" content={jsonData.webDev.description} />
+          <link rel="canonical" href="https://www.monacomediaworks.com/webdev" />
+        </Helmet>
+
         <ResponsiveAppBar />
 
         <div className="content">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import ActionAreaCard from "./components/ActionAreaCard";
 import DefaultFooter from "./components/DefaultFooter";
@@ -12,15 +13,25 @@ function ContentCreation() {
 
   // Assuming contentCreation is fetched from an API or imported from a JSON file
   const contentCreation = {
-    "title": t("contentCreation.title"),
-    "description": t("contentCreation.description"),
-    "offerings": t("contentCreation.offerings", { returnObjects: true }),
-    "ctaText": t("contentCreation.ctaText"),
-    "ctaButton": t("contentCreation.ctaButton")
+    title: t("contentCreation.title"),
+    description: t("contentCreation.description"),
+    offerings: t("contentCreation.offerings", { returnObjects: true }),
+    ctaText: t("contentCreation.ctaText"),
+    ctaButton: t("contentCreation.ctaButton")
   };
 
   return (
     <div className="content-creation-page">
+      {/* Add Helmet for meta tags */}
+      <Helmet>
+        <title>{contentCreation.title} - Monaco Media Works</title>
+        <meta name="description" content={contentCreation.description} />
+        <meta name="keywords" content="content creation, media services, Monaco Media Works, professional media, drone content, social media management" />
+        <meta property="og:title" content={`${contentCreation.title} - Monaco Media Works`} />
+        <meta property="og:description" content={contentCreation.description} />
+        <link rel="canonical" href="https://www.monacomediaworks.com/content-creation" />
+      </Helmet>
+      
       <ResponsiveAppBar />
 
       <div className="intro">

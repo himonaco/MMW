@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import ContactForm from './components/ContactForm';
 import './Contact.css';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
@@ -21,6 +22,16 @@ const Contact = () => {
 
     return (
         <div>
+            {/* Add Helmet for meta tags */}
+            <Helmet>
+                <title>{title} - Monaco Media Works</title>
+                <meta name="description" content="Get in touch with Monaco Media Works. We offer professional media services including drone content creation, social media management, post production services, and web development." />
+                <meta name="keywords" content="contact, Monaco Media Works, media services, drone content, social media management, post production, web development" />
+                <meta property="og:title" content={`${title} - Monaco Media Works`} />
+                <meta property="og:description" content="Contact Monaco Media Works for professional media services. We are here to assist you with your media needs." />
+                <link rel="canonical" href="https://www.monacomediaworks.com/contact" />
+            </Helmet>
+            
             <ResponsiveAppBar />
             <div className='contact'>
                 <h1 className='title'>{title}</h1>

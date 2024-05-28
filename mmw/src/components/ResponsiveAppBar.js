@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -30,7 +31,7 @@ const theme = createTheme({
 const pages = [
   { name: "Drone Content Creation", link: "/dronecontentcreation" },
   { name: "Social Media Management", link: "/strategicsocialmediamanagement" },
-  { name: "Post Prodcution Services", link: "/postproductionservices" },
+  { name: "Post Production Services", link: "/postproductionservices" },
   { name: "Web Development Services", link: "/webdev" },
   { name: "Contact Us", link: "/contact" },
 ];
@@ -70,89 +71,99 @@ function ResponsiveAppBar() {
 
   return (
     <ThemeProvider theme={theme}>
+      {/* Add Helmet for meta tags */}
+      <Helmet>
+        <title>Monaco Media Works - Professional Media Services</title>
+        <meta name="description" content="Monaco Media Works offers professional media services including drone content creation, social media management, post production services, and web development." />
+        <meta name="keywords" content="Monaco Media Works, drone content creation, social media management, post production services, web development, media services" />
+        <meta property="og:title" content="Monaco Media Works - Professional Media Services" />
+        <meta property="og:description" content="Monaco Media Works offers professional media services including drone content creation, social media management, post production services, and web development." />
+        <link rel="canonical" href="https://www.monacomediaworks.com" />
+      </Helmet>
+      
       <AppBar position="sticky" sx={{ bgcolor: "white" }} className={`app-bar ${shrinkLogo ? "shrink" : ""}`}>
         <Container maxWidth="xl">
-        <Toolbar disableGutters className="toolbar">
-  {/* Menu Icon Section */}
-  <Box className="menu-icon-section">
-    <IconButton
-      size="large"
-      aria-label="account of current user"
-      aria-controls="menu-appbar"
-      aria-haspopup="true"
-      onClick={handleOpenNavMenu}
-      color="primary"
-      className="icon-button"
-    >
-      <MenuIcon style={{ fontSize: 40 }} />
-    </IconButton>
-    <Menu
-      id="menu-appbar"
-      anchorEl={anchorElNav}
-      anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "left" }}
-      open={Boolean(anchorElNav)}
-      onClose={handleCloseNavMenu}
-      className="menu"
-    >
-      {pages.map((page, index) => (
-        <MenuItem key={page.name} className="menu-item">
-          <Link to={page.link}>
-            <Typography textAlign="center">{page.name}</Typography>
-          </Link>
-        </MenuItem>
-      ))}
-    </Menu>
-  </Box>
+          <Toolbar disableGutters className="toolbar">
+            {/* Menu Icon Section */}
+            <Box className="menu-icon-section">
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="primary"
+                className="icon-button"
+              >
+                <MenuIcon style={{ fontSize: 40 }} />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                keepMounted
+                transformOrigin={{ vertical: "top", horizontal: "left" }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                className="menu"
+              >
+                {pages.map((page, index) => (
+                  <MenuItem key={page.name} className="menu-item">
+                    <Link to={page.link}>
+                      <Typography textAlign="center">{page.name}</Typography>
+                    </Link>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
 
-  {/* Logo Section */}
-  <Typography variant="h5" noWrap component="div" href="#app-bar-with-responsive-menu" className="typography-logo">
-    <Link to="/" className="logo-container">
-      <img src={Logo} alt="Logo" className={`logo ${shrinkLogo ? "shrink" : ""}`} />
-    </Link>
-  </Typography>
+            {/* Logo Section */}
+            <Typography variant="h5" noWrap component="div" href="#app-bar-with-responsive-menu" className="typography-logo">
+              <Link to="/" className="logo-container">
+                <img src={Logo} alt="Logo" className={`logo ${shrinkLogo ? "shrink" : ""}`} />
+              </Link>
+            </Typography>
 
-  {/* Instagram and Flag Icons Section */}
-  <Box className="icons-section">
-    <IconButton
-      size="large"
-      aria-label="instagram"
-      color="primary"
-      component="a"
-      href="https://www.instagram.com/monacomediaworks/"
-      target="_blank"
-      className="instagram-icon"
-    >
-      <InstagramIcon style={{ fontSize: 40 }} />
-    </IconButton>
-    <Box className="box-flags">
-      <a href="#" onClick={handleLanguageToggle}>
-        {i18n.language === "en" ? (
-          <CountryFlag
-            countryCode="FR"
-            svg
-            style={{
-              width: "30px",
-              height: "auto",
-              borderRadius: "50%",
-            }}
-          />
-        ) : (
-          <CountryFlag
-            countryCode="GB"
-            svg
-            style={{
-              width: "30px",
-              height: "auto",
-              borderRadius: "50%",
-            }}
-          />
-        )}
-      </a>
-    </Box>
-  </Box>
-</Toolbar>
+            {/* Instagram and Flag Icons Section */}
+            <Box className="icons-section">
+              <IconButton
+                size="large"
+                aria-label="instagram"
+                color="primary"
+                component="a"
+                href="https://www.instagram.com/monacomediaworks/"
+                target="_blank"
+                className="instagram-icon"
+              >
+                <InstagramIcon style={{ fontSize: 40 }} />
+              </IconButton>
+              <Box className="box-flags">
+                <a href="#" onClick={handleLanguageToggle}>
+                  {i18n.language === "en" ? (
+                    <CountryFlag
+                      countryCode="FR"
+                      svg
+                      style={{
+                        width: "30px",
+                        height: "auto",
+                        borderRadius: "50%",
+                      }}
+                    />
+                  ) : (
+                    <CountryFlag
+                      countryCode="GB"
+                      svg
+                      style={{
+                        width: "30px",
+                        height: "auto",
+                        borderRadius: "50%",
+                      }}
+                    />
+                  )}
+                </a>
+              </Box>
+            </Box>
+          </Toolbar>
         </Container>
       </AppBar>
     </ThemeProvider>

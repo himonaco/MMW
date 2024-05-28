@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import ResponsiveAppBar from './components/ResponsiveAppBar';
 import DefaultFooter from './components/DefaultFooter';
 import ScrollTopButton from "./components/ScrollTopButton";
-import './PostProductionServices.css'
-import { Link } from 'react-router-dom'; // Import Link from react-router-do
+import './PostProductionServices.css';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
-
-
 
 const PostProductionServices = () => {
     const { t } = useTranslation(); // Destructure t from useTranslation
@@ -16,9 +15,18 @@ const PostProductionServices = () => {
         window.scrollTo(0, 0);
     }, []); // This effect runs only once after the component mounts
 
-    
     return (
         <div>
+            {/* Add Helmet for meta tags */}
+            <Helmet>
+                <title>{t('postProductionServices.title')} - Monaco Media Works</title>
+                <meta name="description" content={t('postProductionServices.description')} />
+                <meta name="keywords" content="post production services, media services, Monaco Media Works, video editing, sound design, visual effects" />
+                <meta property="og:title" content={`${t('postProductionServices.title')} - Monaco Media Works`} />
+                <meta property="og:description" content={t('postProductionServices.description')} />
+                <link rel="canonical" href="https://www.monacomediaworks.com/postproductionservices" />
+            </Helmet>
+
             <ResponsiveAppBar />
             <div className="content">
                 <h1 className="title">{t('postProductionServices.title')}</h1>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import "./Drone.css"; // Import the new CSS file
 import DefaultFooter from "./components/DefaultFooter";
@@ -25,21 +26,27 @@ function DroneContentCreation() {
   return (
     <ThemeProvider theme={theme}>
       <div className="drone">
+        {/* Add Helmet for meta tags */}
+        <Helmet>
+          <title>{t("droneContentCreation.title")} - Monaco Media Works</title>
+          <meta name="description" content={t("droneContentCreation.description")} />
+          <meta name="keywords" content="drone content creation, media services, Monaco Media Works, aerial photography, video production" />
+          <meta property="og:title" content={`${t("droneContentCreation.title")} - Monaco Media Works`} />
+          <meta property="og:description" content={t("droneContentCreation.description")} />
+          <link rel="canonical" href="https://www.monacomediaworks.com/dronecontentcreation" />
+        </Helmet>
+
         <ResponsiveAppBar />
 
         <div className="content">
           {/* Drone Services Section */}
           <section id="services">
-          <h2 className="title">{t("droneContentCreation.title")}</h2>
-
-            <h3 className="description">
-              {t("droneContentCreation.description")}
-            </h3>
+            <h2 className="title">{t("droneContentCreation.title")}</h2>
+            <h3 className="description">{t("droneContentCreation.description")}</h3>
             <ul className="services-list">
               {t("droneContentCreation.services", { returnObjects: true }).map(
                 (service, index) => (
                   <li key={index} className="service-item">
-                    {" "}
                     <strong>{service.title}</strong>
                     <br />
                     {service.description}
@@ -47,9 +54,7 @@ function DroneContentCreation() {
                 )
               )}
             </ul>
-            <h2 className="title">
-              {t("droneContentCreation.whyChooseUs")}
-            </h2>
+            <h2 className="title">{t("droneContentCreation.whyChooseUs")}</h2>
             <p className="why-us">{t("droneContentCreation.whyUs")}</p>
           </section>
 

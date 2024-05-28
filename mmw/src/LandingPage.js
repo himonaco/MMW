@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import ButtonAppBar from "./components/ButtonAppBar";
 import Image1 from "./assets/image1.jpg";
@@ -20,6 +21,16 @@ function LandingPage() {
 
   return (
     <div className="landingPageContent">
+      {/* Add Helmet for meta tags */}
+      <Helmet>
+        <title>Monaco Media Works - Professional Media Services</title>
+        <meta name="description" content="Monaco Media Works specializes in web development and drone content creation, providing professional media services to elevate your online presence." />
+        <meta name="keywords" content="Monaco Media Works, web development, drone content creation, media services, professional media" />
+        <meta property="og:title" content="Monaco Media Works - Professional Media Services" />
+        <meta property="og:description" content="Monaco Media Works specializes in web development and drone content creation, providing professional media services to elevate your online presence." />
+        <link rel="canonical" href="https://www.monacomediaworks.com" />
+      </Helmet>
+
       <div className="landing-page">
         <ButtonAppBar />
         <div className="intro-section">

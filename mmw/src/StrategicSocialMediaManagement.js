@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import DefaultFooter from "./components/DefaultFooter";
 import ScrollTopButton from "./components/ScrollTopButton";
 import { useTranslation } from "react-i18next"; // Import useTranslation hook
 import { Link } from "react-router-dom";
-import "./locales/en.json";
-import "./locales/fr.json";
 import "./StrategicSocialMediaManagement.css";
 
 function StrategicSocialMediaManagement() {
@@ -23,47 +22,33 @@ function StrategicSocialMediaManagement() {
 
   return (
     <div>
-      <ResponsiveAppBar handleLanguageToggle={handleLanguageToggle} />{" "}
+      {/* Add Helmet for meta tags */}
+      <Helmet>
+        <title>{t("strategicSocialMediaManagement.title")} - Monaco Media Works</title>
+        <meta name="description" content={t("strategicSocialMediaManagement.description")} />
+        <meta name="keywords" content="social media management, strategic social media, Monaco Media Works, social media strategy, digital marketing" />
+        <meta property="og:title" content={`${t("strategicSocialMediaManagement.title")} - Monaco Media Works`} />
+        <meta property="og:description" content={t("strategicSocialMediaManagement.description")} />
+        <link rel="canonical" href="https://www.monacomediaworks.com/strategicsocialmediamanagement" />
+      </Helmet>
+
+      <ResponsiveAppBar handleLanguageToggle={handleLanguageToggle} />
       <div className="content">
         <h1 className="title">{t("strategicSocialMediaManagement.title")}</h1>
-        <p className="description">
-          {t("strategicSocialMediaManagement.description")}
-        </p>
-        <h2 className="subtitle">
-          {t("strategicSocialMediaManagement.subtitleCrafting")}
-        </h2>
-        <p className="description">
-          {t("strategicSocialMediaManagement.description")}
-        </p>
-        <h2 className="subtitle">
-          {t("strategicSocialMediaManagement.subtitleElevate")}
-        </h2>
-        <p className="description">
-          {t("strategicSocialMediaManagement.description")}
-        </p>
-        <h2 className="subtitle">
-          {t("strategicSocialMediaManagement.subtitleEngage")}
-        </h2>
-        <p className="description">
-          {t("strategicSocialMediaManagement.description")}
-        </p>
-        <h2 className="subtitle">
-          {t("strategicSocialMediaManagement.subtitleComprehensive")}
-        </h2>
-        <p className="description">
-          {t("strategicSocialMediaManagement.description")}
-        </p>
-        <h2 className="subtitle">
-          {t("strategicSocialMediaManagement.subtitleReady")}
-        </h2>
-        <p className="description">
-          {t("strategicSocialMediaManagement.description")}
-        </p>
+        <p className="description">{t("strategicSocialMediaManagement.description")}</p>
+        <h2 className="subtitle">{t("strategicSocialMediaManagement.subtitleCrafting")}</h2>
+        <p className="description">{t("strategicSocialMediaManagement.descriptionCrafting")}</p>
+        <h2 className="subtitle">{t("strategicSocialMediaManagement.subtitleElevate")}</h2>
+        <p className="description">{t("strategicSocialMediaManagement.descriptionElevate")}</p>
+        <h2 className="subtitle">{t("strategicSocialMediaManagement.subtitleEngage")}</h2>
+        <p className="description">{t("strategicSocialMediaManagement.descriptionEngage")}</p>
+        <h2 className="subtitle">{t("strategicSocialMediaManagement.subtitleComprehensive")}</h2>
+        <p className="description">{t("strategicSocialMediaManagement.descriptionComprehensive")}</p>
+        <h2 className="subtitle">{t("strategicSocialMediaManagement.subtitleReady")}</h2>
+        <p className="description">{t("strategicSocialMediaManagement.descriptionReady")}</p>
       </div>
       <div className="cta-container">
-        <p className="cta-text">
-          {t("strategicSocialMediaManagement.ctaText")}
-        </p>
+        <p className="cta-text">{t("strategicSocialMediaManagement.ctaText")}</p>
         <Link to="/contact" className="cta-button">
           {t("strategicSocialMediaManagement.ctaButton")}
         </Link>
